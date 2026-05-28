@@ -19,6 +19,7 @@ If you want a guided route instead of picking files manually, start here:
 - [60 Day Plan](./learning_paths/60_day_plan.md)
 - [90 Day Plan](./learning_paths/90_day_plan.md)
 - [Practice System](./practice_system/README.md)
+- [Progress Dashboard](./tools/progress_dashboard.py)
 
 ## Learning Path
 
@@ -308,6 +309,7 @@ python3 tests/test_pfpython_models.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
 python3 tools/suggest_today.py --plan 30
+python3 tools/progress_dashboard.py
 python3 tools/run_everything.py
 PYTHONPYCACHEPREFIX=.pycache python3 -m compileall .
 ```
