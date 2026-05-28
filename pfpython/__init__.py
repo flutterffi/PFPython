@@ -3,5 +3,14 @@
 from .banner import build_banner
 from .math_utils import fibonacci, is_prime
 from .models import LearnerProfile
+from .progress import load_progress, mark_file_complete, set_active_plan
 
-__all__ = ["LearnerProfile", "build_banner", "fibonacci", "is_prime"]
+__all__ = [
+    "LearnerProfile",
+    "build_banner",
+    "fibonacci",
+    "is_prime",
+    "load_progress",
+    "mark_file_complete",
+    "set_active_plan",
+]

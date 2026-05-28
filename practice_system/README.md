@@ -7,14 +7,16 @@ Use these files together:
 - `daily_log_template.md`
 - `weekly_review_template.md`
 - `challenge_backlog.md`
+- `checkpoint_template.md`
 
 ## Recommended Loop
 
 1. Pick your path from `STUDY_PATHS.md`
 2. Use `tools/suggest_today.py` for a quick daily suggestion
-3. Fill one daily log after practice
-4. Complete one weekly review every 7 days
-5. Pull one idea from `challenge_backlog.md`
+3. Use `tools/mark_complete.py --file ...` after finishing a file
+4. Fill one daily log after practice
+5. Complete one weekly review every 7 days
+6. Pull one idea from `challenge_backlog.md`
 
 ## Why This Matters
 

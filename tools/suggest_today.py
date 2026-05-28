@@ -1,6 +1,14 @@
 """Suggest a small daily practice plan from the repository."""
 
 from argparse import ArgumentParser
+from pathlib import Path
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from pfpython.progress import load_progress, set_active_plan
 
 
 PLANS: dict[str, list[str]] = {
@@ -39,11 +47,24 @@ def parse_args():
 
 def main() -> None:
     args = parse_args()
+    set_active_plan(args.plan)
+    progress = load_progress()
+    completed = set(progress["completed_files"])
     files = PLANS[args.plan]
+    new_files = [file_name for file_name in files if file_name not in completed]
+    review_files = [file_name for file_name in files if file_name in completed]
 
     print(f"Today's practice plan for the {args.plan}-day path:")
     for index, file_name in enumerate(files, start=1):
         print(f"{index}. {file_name}")
+
+    if new_files:
+        print("\nRecommended next new file:")
+        print(f"- {new_files[0]}")
+
+    if review_files:
+        print("\nRecommended review file:")
+        print(f"- {review_files[-1]}")
 
     print("\nSuggested loop:")
     print("1. Run the file.")
