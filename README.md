@@ -310,6 +310,7 @@ python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
 python3 tools/suggest_today.py --plan 30
 python3 tools/progress_dashboard.py
+python3 tools/progress_dashboard.py --json
 python3 tools/run_everything.py
 PYTHONPYCACHEPREFIX=.pycache python3 -m compileall .
 ```
