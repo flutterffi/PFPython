@@ -12,6 +12,8 @@ def iter_python_files(project_root: Path) -> list[Path]:
         "standard_library",
         "engineering",
         "advanced",
+        "packaging",
+        "interview",
         "projects",
         "tests",
         "modules",

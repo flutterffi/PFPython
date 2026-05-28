@@ -130,7 +130,44 @@ Topics in this stage:
 - threading and concurrency comparisons
 - executors and caching
 
-### 6. Projects
+### 6. Packaging
+
+The `packaging/` folder teaches how Python projects become reusable packages.
+
+Run them like this:
+
+```bash
+python3 packaging/01_local_package_layout.py
+python3 packaging/02_entry_points_overview.py
+```
+
+Topics in this stage:
+
+- package structure
+- `python -m`
+- local install concepts
+- entry-point thinking
+
+### 7. Interview
+
+The `interview/` folder contains small algorithm and data-processing exercises.
+
+Run them like this:
+
+```bash
+python3 interview/01_two_sum_dict.py
+python3 interview/02_palindrome_check.py
+python3 interview/03_word_frequency.py
+```
+
+Topics in this stage:
+
+- hash maps
+- strings
+- counting patterns
+- interview-style reasoning
+
+### 8. Projects
 
 The `projects/` folder turns lessons into small runnable applications.
 
@@ -142,6 +179,7 @@ python3 projects/02_file_organizer_preview.py
 python3 projects/03_study_tracker_sqlite.py
 python3 projects/04_habit_tracker_app/main.py
 python3 projects/05_study_assistant_app/main.py --topic caching
+python3 projects/06_revision_trainer_app/main.py --topic queues
 ```
 
 Use these projects to practice:
@@ -151,7 +189,7 @@ Use these projects to practice:
 - command-line workflows
 - refactoring from a single file into multiple modules later
 
-### 7. Tests
+### 9. Tests
 
 The `tests/` folder introduces real test-style files while still allowing direct execution.
 
@@ -168,7 +206,7 @@ Later, when `pytest` is available, you can also run:
 pytest
 ```
 
-### 8. Modules
+### 10. Modules
 
 The `modules/` folder helps you practice imports, packages, command-line arguments, and basic project structure.
 
@@ -190,7 +228,7 @@ These examples are meant to help you practice:
 - `pathlib`
 - simple data loading with `json`
 
-### 9. Package Practice
+### 11. Package Practice
 
 The `pfpython/` package contains reusable helpers and simple models.
 
@@ -203,7 +241,7 @@ python3 pfpython/banner.py
 python3 pfpython/practice.py
 ```
 
-### 10. How To Practice
+### 12. How To Practice
 
 Use the repository in loops:
 
@@ -231,6 +269,8 @@ PFPython/
   standard_library/   # practical official-library practice
   engineering/        # testing, CLI, config, and project habits
   advanced/           # async, profiling, and harder abstractions
+  packaging/          # package layout and install concepts
+  interview/          # interview-style practice problems
   projects/           # small runnable applications
   tests/              # direct-run tests and later pytest practice
   modules/            # imports, packages, CLI, and data flow
@@ -248,9 +288,12 @@ python3 core_python/05_dataclasses.py
 python3 standard_library/02_collections_counter.py
 python3 engineering/02_small_cli_app.py --task Learner
 python3 advanced/01_async_intro.py
+python3 packaging/01_local_package_layout.py
+python3 interview/01_two_sum_dict.py
 python3 projects/01_todo_cli.py --add "finish one lesson"
 python3 projects/04_habit_tracker_app/main.py --add "Review typing"
 python3 projects/05_study_assistant_app/main.py --topic unittest
+python3 projects/06_revision_trainer_app/main.py --topic retry
 python3 tests/test_pfpython_models.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
@@ -270,6 +313,7 @@ PYTHONPYCACHEPREFIX=.pycache python3 -m compileall .
 - revisit projects and split them into modules as you improve
 - compare multiple ways to solve the same problem
 - revisit old scripts and turn them into small packages
+- solve the same interview problem in more than one way
 
 ## Next Expansion Ideas
 
