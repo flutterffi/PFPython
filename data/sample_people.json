@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Ada",
+    "role": "learner",
+    "years_of_practice": 1
+  },
+  {
+    "name": "Linus",
+    "role": "builder",
+    "years_of_practice": 3
+  },
+  {
+    "name": "Grace",
+    "role": "mentor",
+    "years_of_practice": 8
+  }
+]
