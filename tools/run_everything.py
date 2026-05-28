@@ -6,7 +6,15 @@ import sys
 
 
 def iter_python_files(project_root: Path) -> list[Path]:
-    directories = ["foundations", "modules", "pfpython"]
+    directories = [
+        "foundations",
+        "core_python",
+        "standard_library",
+        "engineering",
+        "advanced",
+        "modules",
+        "pfpython",
+    ]
     files: list[Path] = []
 
     for directory in directories:

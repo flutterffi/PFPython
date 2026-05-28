@@ -8,6 +8,7 @@ The goal is simple:
 - practice syntax by reading and editing real code
 - learn package and module management without extra setup friction
 - leave space for your later advanced training
+- move from basics to real engineering skills step by step
 
 ## Learning Path
 
@@ -36,7 +37,84 @@ Suggested order:
 11. `11_files_and_paths.py`
 12. `12_iterators_and_generators.py`
 
-### 2. Modules
+### 2. Core Python
+
+The `core_python/` folder deepens your understanding of how Python really works.
+
+Run these lessons like this:
+
+```bash
+python3 core_python/01_scope_and_mutability.py
+python3 core_python/04_decorators_intro.py
+python3 core_python/06_inheritance_and_polymorphism.py
+```
+
+Topics in this stage:
+
+- scope and mutability
+- `*args` and `**kwargs`
+- higher-order functions
+- decorators
+- dataclasses
+- inheritance and polymorphism
+
+### 3. Standard Library
+
+The `standard_library/` folder helps you build useful instincts with Python's built-in tools.
+
+Run them like this:
+
+```bash
+python3 standard_library/01_datetime_basics.py
+python3 standard_library/02_collections_counter.py
+python3 standard_library/03_itertools_patterns.py
+```
+
+Topics in this stage:
+
+- `datetime`
+- `collections`
+- `itertools`
+- reusable data transformations
+
+### 4. Engineering
+
+The `engineering/` folder starts moving from syntax drills into small project habits.
+
+Run them like this:
+
+```bash
+python3 engineering/01_pytest_basics.py
+python3 engineering/02_small_cli_app.py --task "review modules"
+python3 engineering/03_config_and_env.py
+```
+
+Topics in this stage:
+
+- testing mindset
+- CLI design
+- configuration patterns
+- clearer code organization
+
+### 5. Advanced
+
+The `advanced/` folder introduces ideas you will see in real projects and technical interviews.
+
+Run them like this:
+
+```bash
+python3 advanced/01_async_intro.py
+python3 advanced/02_custom_iterable.py
+python3 advanced/03_simple_profiling.py
+```
+
+Topics in this stage:
+
+- async programming
+- custom iterables
+- simple profiling and measurement
+
+### 6. Modules
 
 The `modules/` folder helps you practice imports, packages, command-line arguments, and basic project structure.
 
@@ -58,7 +136,7 @@ These examples are meant to help you practice:
 - `pathlib`
 - simple data loading with `json`
 
-### 3. Package Practice
+### 7. Package Practice
 
 The `pfpython/` package contains reusable helpers and simple models.
 
@@ -71,7 +149,7 @@ python3 pfpython/banner.py
 python3 pfpython/practice.py
 ```
 
-### 4. How To Practice
+### 8. How To Practice
 
 Use the repository in loops:
 
@@ -95,6 +173,10 @@ Good modifications to try:
 ```text
 PFPython/
   foundations/        # syntax drills, one runnable file per lesson
+  core_python/        # deeper Python language concepts
+  standard_library/   # practical official-library practice
+  engineering/        # testing, CLI, config, and project habits
+  advanced/           # async, profiling, and harder abstractions
   modules/            # imports, packages, CLI, and data flow
   pfpython/           # reusable package modules
   data/               # tiny practice data files
@@ -106,10 +188,14 @@ PFPython/
 
 ```bash
 python3 foundations/06_functions.py
+python3 core_python/05_dataclasses.py
+python3 standard_library/02_collections_counter.py
+python3 engineering/02_small_cli_app.py --task Learner
+python3 advanced/01_async_intro.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
 python3 tools/run_everything.py
-python3 -m compileall .
+PYTHONPYCACHEPREFIX=.pycache python3 -m compileall .
 ```
 
 ## Training Rules For Yourself
@@ -119,17 +205,20 @@ python3 -m compileall .
 - write one idea per lesson
 - when confused, print values and types
 - revisit old lessons and refactor them
+- build tiny utilities before building larger apps
+- test one idea at a time
 
 ## Next Expansion Ideas
 
-- decorators
-- dataclasses
 - context managers
 - regular expressions
-- unit tests with `pytest`
-- async programming
+- file parsers
+- sqlite practice
+- custom exceptions
+- mocking
 - HTTP requests
 - typing and protocols
 - packaging and publishing
+- small multi-file projects
 
 Build slowly, stay curious, and use this repo as your personal Python gym.
