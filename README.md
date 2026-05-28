@@ -15,6 +15,7 @@ The goal is simple:
 If you want a guided route instead of picking files manually, start here:
 
 - [STUDY_PATHS.md](./STUDY_PATHS.md)
+- [OFFICIAL_RESOURCES.md](./OFFICIAL_RESOURCES.md)
 - [30 Day Plan](./learning_paths/30_day_plan.md)
 - [60 Day Plan](./learning_paths/60_day_plan.md)
 - [90 Day Plan](./learning_paths/90_day_plan.md)
