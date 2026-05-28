@@ -14,3 +14,4 @@ Suggested order:
 1. `01_todo_cli.py`
 2. `02_file_organizer_preview.py`
 3. `03_study_tracker_sqlite.py`
+4. `04_habit_tracker_app/`

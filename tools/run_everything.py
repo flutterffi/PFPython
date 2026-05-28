@@ -20,7 +20,7 @@ def iter_python_files(project_root: Path) -> list[Path]:
     files: list[Path] = []
 
     for directory in directories:
-        for file_path in sorted((project_root / directory).glob("*.py")):
+        for file_path in sorted((project_root / directory).rglob("*.py")):
             if file_path.name == "__init__.py":
                 continue
             files.append(file_path)

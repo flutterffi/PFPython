@@ -59,6 +59,7 @@ Topics in this stage:
 - inheritance and polymorphism
 - context managers
 - typing and protocols
+- properties and descriptors
 
 ### 3. Standard Library
 
@@ -81,6 +82,7 @@ Topics in this stage:
 - regular expressions
 - `sqlite3`
 - `csv`
+- local HTTP workflows
 
 ### 4. Engineering
 
@@ -102,6 +104,8 @@ Topics in this stage:
 - clearer code organization
 - custom exceptions
 - mocking basics
+- logging
+- pytest fixtures
 
 ### 5. Advanced
 
@@ -122,6 +126,7 @@ Topics in this stage:
 - simple profiling and measurement
 - generator pipelines
 - descriptors
+- threading and concurrency comparisons
 
 ### 6. Projects
 
@@ -133,6 +138,7 @@ Run them like this:
 python3 projects/01_todo_cli.py --add "review generators"
 python3 projects/02_file_organizer_preview.py
 python3 projects/03_study_tracker_sqlite.py
+python3 projects/04_habit_tracker_app/main.py
 ```
 
 Use these projects to practice:
@@ -240,6 +246,7 @@ python3 standard_library/02_collections_counter.py
 python3 engineering/02_small_cli_app.py --task Learner
 python3 advanced/01_async_intro.py
 python3 projects/01_todo_cli.py --add "finish one lesson"
+python3 projects/04_habit_tracker_app/main.py --add "Review typing"
 python3 tests/test_pfpython_models.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
@@ -257,6 +264,7 @@ PYTHONPYCACHEPREFIX=.pycache python3 -m compileall .
 - build tiny utilities before building larger apps
 - test one idea at a time
 - revisit projects and split them into modules as you improve
+- compare multiple ways to solve the same problem
 
 ## Next Expansion Ideas
 
