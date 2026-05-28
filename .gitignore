@@ -16,3 +16,5 @@ data/habit_tracker.json
 data/study_assistant_report.json
 data/revision_trainer_sessions.json
 data/learner_progress.json
+practice_system/logs/daily/*.md
+practice_system/logs/weekly/*.md

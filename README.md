@@ -311,6 +311,8 @@ python3 -m pfpython
 python3 tools/suggest_today.py --plan 30
 python3 tools/mark_complete.py --file foundations/01_hello_world.py
 python3 tools/show_next.py
+python3 tools/create_daily_log.py
+python3 tools/create_weekly_log.py --week week-01
 python3 tools/progress_dashboard.py
 python3 tools/progress_dashboard.py --json
 python3 tools/run_everything.py

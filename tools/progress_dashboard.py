@@ -9,6 +9,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+from pfpython.logs import count_daily_logs, count_weekly_logs
 from pfpython.progress import completed_file_set, latest_completed_file, load_progress
 
 
@@ -76,6 +77,8 @@ def build_dashboard_data(project_root: Path) -> dict[str, object]:
         "completed_files": completed_total,
         "completion_percent": round(0.0 if total == 0 else (completed_total / total) * 100, 2),
         "latest_completed_file": latest_completed_file(progress),
+        "daily_logs": count_daily_logs(),
+        "weekly_logs": count_weekly_logs(),
         "stage_count": len(stage_rows),
         "stages": stage_rows,
     }
@@ -120,6 +123,8 @@ def main() -> None:
     print(f"total files      {dashboard['total_files']:>3}")
     print(f"completed files  {dashboard['completed_files']:>3} ({dashboard['completion_percent']:>5.2f}%)")
     print(f"latest completed {dashboard['latest_completed_file'] or 'none'}")
+    print(f"daily logs       {dashboard['daily_logs']:>3}")
+    print(f"weekly logs      {dashboard['weekly_logs']:>3}")
 
 
 if __name__ == "__main__":
