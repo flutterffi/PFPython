@@ -15,3 +15,4 @@ Suggested order:
 2. `02_file_organizer_preview.py`
 3. `03_study_tracker_sqlite.py`
 4. `04_habit_tracker_app/`
+5. `05_study_assistant_app/`

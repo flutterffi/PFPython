@@ -13,3 +13,4 @@ data/*.db
 data/*.csv
 data/todo_items.json
 data/habit_tracker.json
+data/study_assistant_report.json

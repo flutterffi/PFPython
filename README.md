@@ -106,6 +106,7 @@ Topics in this stage:
 - mocking basics
 - logging
 - pytest fixtures
+- unittest
 
 ### 5. Advanced
 
@@ -127,6 +128,7 @@ Topics in this stage:
 - generator pipelines
 - descriptors
 - threading and concurrency comparisons
+- executors and caching
 
 ### 6. Projects
 
@@ -139,6 +141,7 @@ python3 projects/01_todo_cli.py --add "review generators"
 python3 projects/02_file_organizer_preview.py
 python3 projects/03_study_tracker_sqlite.py
 python3 projects/04_habit_tracker_app/main.py
+python3 projects/05_study_assistant_app/main.py --topic caching
 ```
 
 Use these projects to practice:
@@ -247,6 +250,7 @@ python3 engineering/02_small_cli_app.py --task Learner
 python3 advanced/01_async_intro.py
 python3 projects/01_todo_cli.py --add "finish one lesson"
 python3 projects/04_habit_tracker_app/main.py --add "Review typing"
+python3 projects/05_study_assistant_app/main.py --topic unittest
 python3 tests/test_pfpython_models.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
@@ -265,6 +269,7 @@ PYTHONPYCACHEPREFIX=.pycache python3 -m compileall .
 - test one idea at a time
 - revisit projects and split them into modules as you improve
 - compare multiple ways to solve the same problem
+- revisit old scripts and turn them into small packages
 
 ## Next Expansion Ideas
 
