@@ -4,3 +4,7 @@ version = "0.1.0"
 description = "English-first Python practice repository for syntax and module management."
 readme = "README.md"
 requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

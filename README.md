@@ -57,6 +57,8 @@ Topics in this stage:
 - decorators
 - dataclasses
 - inheritance and polymorphism
+- context managers
+- typing and protocols
 
 ### 3. Standard Library
 
@@ -76,6 +78,9 @@ Topics in this stage:
 - `collections`
 - `itertools`
 - reusable data transformations
+- regular expressions
+- `sqlite3`
+- `csv`
 
 ### 4. Engineering
 
@@ -95,6 +100,8 @@ Topics in this stage:
 - CLI design
 - configuration patterns
 - clearer code organization
+- custom exceptions
+- mocking basics
 
 ### 5. Advanced
 
@@ -113,8 +120,46 @@ Topics in this stage:
 - async programming
 - custom iterables
 - simple profiling and measurement
+- generator pipelines
+- descriptors
 
-### 6. Modules
+### 6. Projects
+
+The `projects/` folder turns lessons into small runnable applications.
+
+Run them like this:
+
+```bash
+python3 projects/01_todo_cli.py --add "review generators"
+python3 projects/02_file_organizer_preview.py
+python3 projects/03_study_tracker_sqlite.py
+```
+
+Use these projects to practice:
+
+- splitting logic into helper functions
+- persistent data with files or databases
+- command-line workflows
+- refactoring from a single file into multiple modules later
+
+### 7. Tests
+
+The `tests/` folder introduces real test-style files while still allowing direct execution.
+
+Run them like this:
+
+```bash
+python3 tests/test_pfpython_models.py
+python3 tests/test_pfpython_practice.py
+```
+
+Later, when `pytest` is available, you can also run:
+
+```bash
+pytest
+```
+
+### 8. Modules
 
 The `modules/` folder helps you practice imports, packages, command-line arguments, and basic project structure.
 
@@ -136,7 +181,7 @@ These examples are meant to help you practice:
 - `pathlib`
 - simple data loading with `json`
 
-### 7. Package Practice
+### 9. Package Practice
 
 The `pfpython/` package contains reusable helpers and simple models.
 
@@ -149,7 +194,7 @@ python3 pfpython/banner.py
 python3 pfpython/practice.py
 ```
 
-### 8. How To Practice
+### 10. How To Practice
 
 Use the repository in loops:
 
@@ -177,6 +222,8 @@ PFPython/
   standard_library/   # practical official-library practice
   engineering/        # testing, CLI, config, and project habits
   advanced/           # async, profiling, and harder abstractions
+  projects/           # small runnable applications
+  tests/              # direct-run tests and later pytest practice
   modules/            # imports, packages, CLI, and data flow
   pfpython/           # reusable package modules
   data/               # tiny practice data files
@@ -192,6 +239,8 @@ python3 core_python/05_dataclasses.py
 python3 standard_library/02_collections_counter.py
 python3 engineering/02_small_cli_app.py --task Learner
 python3 advanced/01_async_intro.py
+python3 projects/01_todo_cli.py --add "finish one lesson"
+python3 tests/test_pfpython_models.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
 python3 tools/run_everything.py
@@ -207,18 +256,17 @@ PYTHONPYCACHEPREFIX=.pycache python3 -m compileall .
 - revisit old lessons and refactor them
 - build tiny utilities before building larger apps
 - test one idea at a time
+- revisit projects and split them into modules as you improve
 
 ## Next Expansion Ideas
 
-- context managers
-- regular expressions
-- file parsers
-- sqlite practice
-- custom exceptions
-- mocking
 - HTTP requests
-- typing and protocols
+- decorators in larger designs
+- file parsers
+- logging patterns
+- thread pools and process pools
+- real pytest fixtures
 - packaging and publishing
-- small multi-file projects
+- multi-file projects with internal packages
 
 Build slowly, stay curious, and use this repo as your personal Python gym.
