@@ -10,6 +10,15 @@ The goal is simple:
 - leave space for your later advanced training
 - move from basics to real engineering skills step by step
 
+## Study Plans
+
+If you want a guided route instead of picking files manually, start here:
+
+- [STUDY_PATHS.md](./STUDY_PATHS.md)
+- [30 Day Plan](./learning_paths/30_day_plan.md)
+- [60 Day Plan](./learning_paths/60_day_plan.md)
+- [90 Day Plan](./learning_paths/90_day_plan.md)
+
 ## Learning Path
 
 ### 1. Foundations
