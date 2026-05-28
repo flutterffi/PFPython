@@ -14,6 +14,8 @@ The goal is simple:
 
 If you want a guided route instead of picking files manually, start here:
 
+- [FOLDER_GUIDE.md](./FOLDER_GUIDE.md)
+- [Practice Tracks](./practice_tracks/README.md)
 - [STUDY_PATHS.md](./STUDY_PATHS.md)
 - [OFFICIAL_RESOURCES.md](./OFFICIAL_RESOURCES.md)
 - [30 Day Plan](./learning_paths/30_day_plan.md)
@@ -23,6 +25,12 @@ If you want a guided route instead of picking files manually, start here:
 - [Progress Dashboard](./tools/progress_dashboard.py)
 
 ## Learning Path
+
+Before picking files, you can also choose by usage style:
+
+- quick drills and syntax practice: [Quick Hands-On Track](./practice_tracks/quick_hands_on.md)
+- project-oriented practice: [Project Practice Track](./practice_tracks/project_practice.md)
+- review and retention loop: [Review Track](./practice_tracks/review_track.md)
 
 ### 1. Foundations
 
@@ -291,6 +299,10 @@ PFPython/
   tools/              # helper scripts for repository checks
   pyproject.toml      # basic project metadata
 ```
+
+See the detailed folder map here:
+
+- [FOLDER_GUIDE.md](./FOLDER_GUIDE.md)
 
 ## Commands You Will Use Often
 
