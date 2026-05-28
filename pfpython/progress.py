@@ -70,6 +70,20 @@ def latest_completed_file(progress: dict[str, object]) -> Optional[str]:
     return study_log[-1]["file"]
 
 
+def recently_completed_files(progress: dict[str, object], limit: int = 3) -> list[str]:
+    study_log = list(progress["study_log"])
+    recent_files: list[str] = []
+
+    for item in reversed(study_log):
+        file_name = item["file"]
+        if file_name not in recent_files:
+            recent_files.append(file_name)
+        if len(recent_files) >= limit:
+            break
+
+    return recent_files
+
+
 def main() -> None:
     print(load_progress())
 

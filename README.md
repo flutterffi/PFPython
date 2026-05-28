@@ -309,6 +309,7 @@ python3 tests/test_pfpython_models.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
 python3 tools/suggest_today.py --plan 30
+python3 tools/suggest_today.py --plan 30 --json
 python3 tools/mark_complete.py --file foundations/01_hello_world.py
 python3 tools/show_next.py
 python3 tools/create_daily_log.py
