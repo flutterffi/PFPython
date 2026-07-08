@@ -210,6 +210,7 @@ python3 projects/05_study_assistant_app/main.py --topic caching
 python3 projects/06_revision_trainer_app/main.py --topic queues
 python3 projects/07_backend_service_app/main.py --topic fastapi
 python3 projects/07_backend_service_app/app_main.py
+python3 projects/08_backend_systems_lab/main.py --topic observability
 ```
 
 Use these projects to practice:
@@ -219,6 +220,7 @@ Use these projects to practice:
 - command-line workflows
 - refactoring from a single file into multiple modules later
 - backend-oriented structure with logging and optional API routing
+- combining auth, cache, idempotency, jobs, and observability in one lab
 
 ### 9. Tests
 
@@ -393,6 +395,7 @@ python3 projects/05_study_assistant_app/main.py --topic unittest
 python3 projects/06_revision_trainer_app/main.py --topic retry
 python3 projects/07_backend_service_app/main.py --topic fastapi
 python3 projects/07_backend_service_app/app_main.py
+python3 projects/08_backend_systems_lab/main.py --topic observability
 python3 special_topics/project_architecture/01_layered_architecture.py
 python3 special_topics/project_architecture/03_bootstrap_and_entrypoint.py
 python3 special_topics/backend_architecture/02_structured_logging.py

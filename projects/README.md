@@ -18,3 +18,4 @@ Suggested order:
 5. `05_study_assistant_app/`
 6. `06_revision_trainer_app/`
 7. `07_backend_service_app/`
+8. `08_backend_systems_lab/`

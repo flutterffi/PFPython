@@ -74,6 +74,9 @@ These folders are best when you want to build things and connect multiple ideas 
 - `projects/07_backend_service_app/`
   A backend-style multi-file practice app with config, logging, service, repository, optional FastAPI routing ideas, and a package-based app skeleton.
 
+- `projects/08_backend_systems_lab/`
+  A high-level backend lab that combines auth, caching, idempotency, job scheduling, and observability in one multi-file project.
+
 - `special_topics/project_architecture/`
   A final advanced topic for layered design, dependency flow, bootstrap, and refactoring toward real-world structure.
 
