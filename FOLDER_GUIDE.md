@@ -74,6 +74,9 @@ These folders are best when you want to build things and connect multiple ideas 
 - `special_topics/project_architecture/`
   A final advanced topic for layered design, dependency flow, bootstrap, and refactoring toward real-world structure.
 
+- `special_topics/backend_architecture/`
+  A backend-focused advanced topic for logging, FastAPI-style app structure, request flow, and service boundaries.
+
 ## 4. Planning And Tracking
 
 These folders are best when you want structure, review, and progress visibility.
@@ -106,6 +109,7 @@ If you want to:
 - build stronger habits: go to `engineering/`
 - practice full exercises: go to `projects/`
 - train for larger real-world structure: go to `special_topics/project_architecture/`
+- train for API and backend architecture: go to `special_topics/backend_architecture/`
 - review what you already learned: use `practice_system/` and `tools/`
 
 ## Suggested Daily Use

@@ -64,6 +64,19 @@ Start here:
 
 - [Project Architecture Topic](./special_topics/project_architecture/README.md)
 
+### Backend Advanced Topic
+
+Best for:
+
+- moving from Python scripts into API backend thinking
+- learning logging, configuration, and request flow
+- preparing for FastAPI-style project structure
+- practicing how backend services are wired and tested
+
+Start here:
+
+- [Backend Architecture Topic](./special_topics/backend_architecture/README.md)
+
 ## Weekly Pattern
 
 Use this weekly rhythm for any path:

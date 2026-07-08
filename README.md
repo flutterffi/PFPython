@@ -18,6 +18,7 @@ If you want a guided route instead of picking files manually, start here:
 - [Practice Tracks](./practice_tracks/README.md)
 - [Official Tracks](./official_tracks/README.md)
 - [Project Architecture Topic](./special_topics/project_architecture/README.md)
+- [Backend Architecture Topic](./special_topics/backend_architecture/README.md)
 - [STUDY_PATHS.md](./STUDY_PATHS.md)
 - [OFFICIAL_RESOURCES.md](./OFFICIAL_RESOURCES.md)
 - [30 Day Plan](./learning_paths/30_day_plan.md)
@@ -35,6 +36,7 @@ Before picking files, you can also choose by usage style:
 - review and retention loop: [Review Track](./practice_tracks/review_track.md)
 - official Python documentation order: [Official Tracks](./official_tracks/README.md)
 - final advanced topic: [Project Architecture Topic](./special_topics/project_architecture/README.md)
+- backend practice topic: [Backend Architecture Topic](./special_topics/backend_architecture/README.md)
 
 ### 1. Foundations
 
@@ -285,6 +287,25 @@ Topics in this stage:
 - app bootstrap and entry points
 - refactoring a script into a maintainable project
 
+The `special_topics/backend_architecture/` folder extends the same idea into common Python backend patterns.
+
+Run it like this:
+
+```bash
+python3 special_topics/backend_architecture/01_backend_layers.py
+python3 special_topics/backend_architecture/02_structured_logging.py
+python3 special_topics/backend_architecture/03_fastapi_app_structure.py
+python3 special_topics/backend_architecture/04_request_lifecycle.py
+```
+
+Topics in this stage:
+
+- API-oriented layered design
+- structured logging
+- FastAPI application layout
+- request validation flow
+- service and repository boundaries for backend systems
+
 ### 13. How To Practice
 
 Use the repository in loops:
@@ -345,6 +366,8 @@ python3 projects/05_study_assistant_app/main.py --topic unittest
 python3 projects/06_revision_trainer_app/main.py --topic retry
 python3 special_topics/project_architecture/01_layered_architecture.py
 python3 special_topics/project_architecture/03_bootstrap_and_entrypoint.py
+python3 special_topics/backend_architecture/02_structured_logging.py
+python3 special_topics/backend_architecture/03_fastapi_app_structure.py
 python3 tests/test_pfpython_models.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython

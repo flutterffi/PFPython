@@ -74,6 +74,20 @@ These official pages support `engineering/` and `tests/`:
 - `unittest.mock`: [English](https://docs.python.org/3/library/unittest.mock.html) | [Chinese](https://docs.python.org/zh-cn/3/library/unittest.mock.html)
 - `tempfile`: [English](https://docs.python.org/3/library/tempfile.html) | [Chinese](https://docs.python.org/zh-cn/3/library/tempfile.html)
 
+## Backend And API Practice
+
+These official and primary docs support `special_topics/backend_architecture/`:
+
+- `logging`: [English](https://docs.python.org/3/library/logging.html) | [Chinese](https://docs.python.org/zh-cn/3/library/logging.html)
+- `json`: [English](https://docs.python.org/3/library/json.html) | [Chinese](https://docs.python.org/zh-cn/3/library/json.html)
+- FastAPI docs: [English](https://fastapi.tiangolo.com/) | [Chinese](https://fastapi.tiangolo.com/zh/)
+- FastAPI tutorial: [English](https://fastapi.tiangolo.com/tutorial/) | [Chinese](https://fastapi.tiangolo.com/zh/tutorial/)
+- FastAPI bigger applications: [English](https://fastapi.tiangolo.com/tutorial/bigger-applications/) | [Chinese](https://fastapi.tiangolo.com/zh/tutorial/bigger-applications/)
+- FastAPI dependencies: [English](https://fastapi.tiangolo.com/tutorial/dependencies/) | [Chinese](https://fastapi.tiangolo.com/zh/tutorial/dependencies/)
+- FastAPI settings and environment variables: [English](https://fastapi.tiangolo.com/advanced/settings/) | [Chinese](https://fastapi.tiangolo.com/zh/advanced/settings/)
+- Uvicorn docs: [English](https://www.uvicorn.org/)
+- Pydantic docs: [English](https://pydantic.dev/docs/validation/latest/get-started/)
+
 ## Advanced Topics
 
 These official pages fit `advanced/`:
