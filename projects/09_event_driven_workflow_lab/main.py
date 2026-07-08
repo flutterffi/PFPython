@@ -25,6 +25,12 @@ def parse_args():
         action="store_true",
         help="Simulate duplicated event publication.",
     )
+    parser.add_argument(
+        "--publish-fail-times",
+        type=int,
+        default=0,
+        help="Simulate transient broker publish failures before success.",
+    )
     return parser.parse_args()
 
 
@@ -36,6 +42,7 @@ def main() -> None:
             topic=args.topic,
             fail_step=args.fail_step,
             duplicate_publish=args.duplicate_publish,
+            publish_fail_times=args.publish_fail_times,
         )
     )
 

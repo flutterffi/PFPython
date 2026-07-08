@@ -18,6 +18,7 @@ def test_workflow_lab_publishes_events_and_projection() -> None:
     result = service.run_workflow("payments")
 
     assert result["state"]["status"] in {"running", "completed"}
+    assert result["publish_result"]["status"] == "succeeded"
     assert len(result["events"]) == 3
     assert result["projection"]["event_count"] == 3
 
@@ -28,6 +29,24 @@ def test_workflow_lab_compensates_failed_publish() -> None:
 
     assert result["state"]["status"] == "compensating"
     assert any(step.startswith("compensate:") for step in result["state"]["steps"])
+
+
+def test_workflow_lab_retries_publish_until_success() -> None:
+    service = WorkflowLabService()
+    result = service.run_workflow("payments", publish_fail_times=1)
+
+    assert result["publish_result"]["status"] == "succeeded"
+    assert result["publish_result"]["attempts"] == 2
+    assert len(result["events"]) == 3
+
+
+def test_workflow_lab_opens_circuit_after_repeated_failures() -> None:
+    service = WorkflowLabService()
+    result = service.run_workflow("payments", publish_fail_times=3)
+
+    assert result["publish_result"]["status"] == "blocked"
+    assert result["publish_result"]["breaker_state"] == "open"
+    assert result["state"]["status"] == "compensating"
 
 
 def test_workflow_lab_deduplicates_republished_events() -> None:
@@ -67,6 +86,8 @@ def test_rebuilt_projection_marks_replay_state() -> None:
 def main() -> None:
     test_workflow_lab_publishes_events_and_projection()
     test_workflow_lab_compensates_failed_publish()
+    test_workflow_lab_retries_publish_until_success()
+    test_workflow_lab_opens_circuit_after_repeated_failures()
     test_workflow_lab_deduplicates_republished_events()
     test_projection_groups_events_by_topic()
     test_rebuilt_projection_marks_replay_state()

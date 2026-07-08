@@ -12,6 +12,7 @@ from consumer import DeduplicatingConsumer
 from models import DomainEvent, WorkflowState
 from outbox import OutboxStore
 from projector import build_projection, rebuild_projection
+from resilience import CircuitBreaker, RetryPolicy, execute_with_retry
 from saga import advance_workflow, compensate_workflow
 
 
@@ -20,12 +21,15 @@ class WorkflowLabService:
         self.outbox = OutboxStore()
         self.broker = EventBroker()
         self.consumer = DeduplicatingConsumer()
+        self.retry_policy = RetryPolicy(max_attempts=3)
+        self.circuit_breaker = CircuitBreaker(failure_threshold=2)
 
     def run_workflow(
         self,
         topic: str,
         fail_step: str | None = None,
         duplicate_publish: bool = False,
+        publish_fail_times: int = 0,
     ) -> dict[str, object]:
         state = WorkflowState(workflow_id=f"wf-{topic}", topic=topic, status="started", steps=["requested"])
         self.outbox.append(
@@ -69,9 +73,21 @@ class WorkflowLabService:
             )
 
         events = self.outbox.flush()
-        self.broker.publish(events)
-        if duplicate_publish:
+        publish_result = execute_with_retry(
+            action_name="publish-events",
+            fail_times=publish_fail_times,
+            retry_policy=self.retry_policy,
+            circuit_breaker=self.circuit_breaker,
+        )
+        if publish_result["status"] == "succeeded":
             self.broker.publish(events)
+            if duplicate_publish:
+                self.broker.publish(events)
+        elif publish_result["status"] == "blocked":
+            state = compensate_workflow(state, "circuit-open")
+        else:
+            state = compensate_workflow(state, "publish-retries-exhausted")
+
         consumed = self.broker.consume()
         consumer_report = self.consumer.consume(consumed)
         projection = build_projection(self.consumer.processed)
@@ -79,6 +95,7 @@ class WorkflowLabService:
 
         return {
             "state": state.to_dict(),
+            "publish_result": publish_result,
             "events": [event.to_dict() for event in consumed],
             "consumer_report": consumer_report,
             "projection": projection,
