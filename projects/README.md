@@ -16,3 +16,5 @@ Suggested order:
 3. `03_study_tracker_sqlite.py`
 4. `04_habit_tracker_app/`
 5. `05_study_assistant_app/`
+6. `06_revision_trainer_app/`
+7. `07_backend_service_app/`
