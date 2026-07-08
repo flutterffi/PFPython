@@ -18,6 +18,15 @@ def build_projection(events: list[DomainEvent]) -> dict[str, object]:
     return summary
 
 
+def rebuild_projection(event_log: list[DomainEvent]) -> dict[str, object]:
+    """Rebuild a read model from the full persisted event log."""
+
+    projection = build_projection(event_log)
+    projection["rebuilt"] = True
+    projection["unique_topics"] = sorted(projection["topics"])
+    return projection
+
+
 def main() -> None:
     events = [
         DomainEvent("evt-1", "payment.requested", "payments", {"amount": 99}),

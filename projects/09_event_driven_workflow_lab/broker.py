@@ -20,6 +20,11 @@ class EventBroker:
     def consume(self) -> list[DomainEvent]:
         return list(self.published)
 
+    def replay(self) -> list[DomainEvent]:
+        """Return the full event log for projection rebuild practice."""
+
+        return list(self.published)
+
 
 def main() -> None:
     broker = EventBroker()

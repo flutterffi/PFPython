@@ -9,7 +9,7 @@ PROJECT_DIR = PROJECT_ROOT / "projects" / "09_event_driven_workflow_lab"
 if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
-from projector import build_projection
+from projector import build_projection, rebuild_projection
 from service import WorkflowLabService
 
 
@@ -30,6 +30,15 @@ def test_workflow_lab_compensates_failed_publish() -> None:
     assert any(step.startswith("compensate:") for step in result["state"]["steps"])
 
 
+def test_workflow_lab_deduplicates_republished_events() -> None:
+    service = WorkflowLabService()
+    result = service.run_workflow("payments", duplicate_publish=True)
+
+    assert len(result["events"]) == 6
+    assert result["consumer_report"]["processed_count"] == 3
+    assert result["consumer_report"]["duplicate_count"] == 3
+
+
 def test_projection_groups_events_by_topic() -> None:
     service = WorkflowLabService()
     result = service.run_workflow("orders")
@@ -42,10 +51,25 @@ def test_projection_groups_events_by_topic() -> None:
     assert "orders" in projection["topics"]
 
 
+def test_rebuilt_projection_marks_replay_state() -> None:
+    service = WorkflowLabService()
+    result = service.run_workflow("payments")
+    rebuilt = rebuild_projection(
+        [
+            type("Event", (), event)()
+            for event in result["events"]
+        ]
+    )
+    assert rebuilt["rebuilt"] is True
+    assert rebuilt["unique_topics"] == ["payments"]
+
+
 def main() -> None:
     test_workflow_lab_publishes_events_and_projection()
     test_workflow_lab_compensates_failed_publish()
+    test_workflow_lab_deduplicates_republished_events()
     test_projection_groups_events_by_topic()
+    test_rebuilt_projection_marks_replay_state()
     print("test_event_driven_workflow_lab.py passed.")
 
 

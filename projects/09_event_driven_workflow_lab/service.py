@@ -8,9 +8,10 @@ if str(CURRENT_DIR) not in sys.path:
     sys.path.insert(0, str(CURRENT_DIR))
 
 from broker import EventBroker
+from consumer import DeduplicatingConsumer
 from models import DomainEvent, WorkflowState
 from outbox import OutboxStore
-from projector import build_projection
+from projector import build_projection, rebuild_projection
 from saga import advance_workflow, compensate_workflow
 
 
@@ -18,8 +19,14 @@ class WorkflowLabService:
     def __init__(self) -> None:
         self.outbox = OutboxStore()
         self.broker = EventBroker()
+        self.consumer = DeduplicatingConsumer()
 
-    def run_workflow(self, topic: str, fail_step: str | None = None) -> dict[str, object]:
+    def run_workflow(
+        self,
+        topic: str,
+        fail_step: str | None = None,
+        duplicate_publish: bool = False,
+    ) -> dict[str, object]:
         state = WorkflowState(workflow_id=f"wf-{topic}", topic=topic, status="started", steps=["requested"])
         self.outbox.append(
             DomainEvent(
@@ -63,13 +70,19 @@ class WorkflowLabService:
 
         events = self.outbox.flush()
         self.broker.publish(events)
+        if duplicate_publish:
+            self.broker.publish(events)
         consumed = self.broker.consume()
-        projection = build_projection(consumed)
+        consumer_report = self.consumer.consume(consumed)
+        projection = build_projection(self.consumer.processed)
+        rebuilt_projection = rebuild_projection(self.broker.replay())
 
         return {
             "state": state.to_dict(),
             "events": [event.to_dict() for event in consumed],
+            "consumer_report": consumer_report,
             "projection": projection,
+            "rebuilt_projection": rebuilt_projection,
         }
 
 

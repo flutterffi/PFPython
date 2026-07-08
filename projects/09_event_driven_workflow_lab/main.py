@@ -20,13 +20,24 @@ def parse_args():
         choices=["publish"],
         help="Simulate a failing workflow step.",
     )
+    parser.add_argument(
+        "--duplicate-publish",
+        action="store_true",
+        help="Simulate duplicated event publication.",
+    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     service = WorkflowLabService()
-    print(service.run_workflow(topic=args.topic, fail_step=args.fail_step))
+    print(
+        service.run_workflow(
+            topic=args.topic,
+            fail_step=args.fail_step,
+            duplicate_publish=args.duplicate_publish,
+        )
+    )
 
 
 if __name__ == "__main__":
