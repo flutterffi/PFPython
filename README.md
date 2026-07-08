@@ -207,6 +207,7 @@ python3 projects/04_habit_tracker_app/main.py
 python3 projects/05_study_assistant_app/main.py --topic caching
 python3 projects/06_revision_trainer_app/main.py --topic queues
 python3 projects/07_backend_service_app/main.py --topic fastapi
+python3 projects/07_backend_service_app/app_main.py
 ```
 
 Use these projects to practice:
@@ -367,6 +368,7 @@ python3 projects/04_habit_tracker_app/main.py --add "Review typing"
 python3 projects/05_study_assistant_app/main.py --topic unittest
 python3 projects/06_revision_trainer_app/main.py --topic retry
 python3 projects/07_backend_service_app/main.py --topic fastapi
+python3 projects/07_backend_service_app/app_main.py
 python3 special_topics/project_architecture/01_layered_architecture.py
 python3 special_topics/project_architecture/03_bootstrap_and_entrypoint.py
 python3 special_topics/backend_architecture/02_structured_logging.py

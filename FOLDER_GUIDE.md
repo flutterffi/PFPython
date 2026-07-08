@@ -72,7 +72,7 @@ These folders are best when you want to build things and connect multiple ideas 
   A queue and retry flavored application.
 
 - `projects/07_backend_service_app/`
-  A backend-style multi-file practice app with config, logging, service, repository, and optional FastAPI routing ideas.
+  A backend-style multi-file practice app with config, logging, service, repository, optional FastAPI routing ideas, and a package-based app skeleton.
 
 - `special_topics/project_architecture/`
   A final advanced topic for layered design, dependency flow, bootstrap, and refactoring toward real-world structure.
