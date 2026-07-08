@@ -19,3 +19,4 @@ Suggested order:
 6. `06_revision_trainer_app/`
 7. `07_backend_service_app/`
 8. `08_backend_systems_lab/`
+9. `09_event_driven_workflow_lab/`

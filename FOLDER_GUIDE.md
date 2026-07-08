@@ -77,6 +77,9 @@ These folders are best when you want to build things and connect multiple ideas 
 - `projects/08_backend_systems_lab/`
   A high-level backend lab that combines auth, caching, idempotency, job scheduling, and observability in one multi-file project.
 
+- `projects/09_event_driven_workflow_lab/`
+  A high-level event-driven lab for outbox publishing, workflow steps, projections, retries, and compensation design.
+
 - `special_topics/project_architecture/`
   A final advanced topic for layered design, dependency flow, bootstrap, and refactoring toward real-world structure.
 
