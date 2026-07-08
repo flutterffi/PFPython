@@ -51,6 +51,19 @@ Start here:
 
 - [90 Day Plan](./learning_paths/90_day_plan.md)
 
+### Final Advanced Topic
+
+Best for:
+
+- learning how real Python apps are split into layers
+- practicing service and repository design
+- understanding entry points and app bootstrap
+- preparing to refactor your own scripts into larger projects
+
+Start here:
+
+- [Project Architecture Topic](./special_topics/project_architecture/README.md)
+
 ## Weekly Pattern
 
 Use this weekly rhythm for any path:

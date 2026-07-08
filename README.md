@@ -17,6 +17,7 @@ If you want a guided route instead of picking files manually, start here:
 - [FOLDER_GUIDE.md](./FOLDER_GUIDE.md)
 - [Practice Tracks](./practice_tracks/README.md)
 - [Official Tracks](./official_tracks/README.md)
+- [Project Architecture Topic](./special_topics/project_architecture/README.md)
 - [STUDY_PATHS.md](./STUDY_PATHS.md)
 - [OFFICIAL_RESOURCES.md](./OFFICIAL_RESOURCES.md)
 - [30 Day Plan](./learning_paths/30_day_plan.md)
@@ -33,6 +34,7 @@ Before picking files, you can also choose by usage style:
 - project-oriented practice: [Project Practice Track](./practice_tracks/project_practice.md)
 - review and retention loop: [Review Track](./practice_tracks/review_track.md)
 - official Python documentation order: [Official Tracks](./official_tracks/README.md)
+- final advanced topic: [Project Architecture Topic](./special_topics/project_architecture/README.md)
 
 ### 1. Foundations
 
@@ -263,7 +265,27 @@ python3 pfpython/banner.py
 python3 pfpython/practice.py
 ```
 
-### 12. How To Practice
+### 12. Special Topics
+
+The `special_topics/project_architecture/` folder is the final advanced topic for real-world project structure practice.
+
+Run it like this:
+
+```bash
+python3 special_topics/project_architecture/01_layered_architecture.py
+python3 special_topics/project_architecture/02_dependency_flow.py
+python3 special_topics/project_architecture/03_bootstrap_and_entrypoint.py
+```
+
+Topics in this stage:
+
+- layered architecture
+- repositories and services
+- dependency direction
+- app bootstrap and entry points
+- refactoring a script into a maintainable project
+
+### 13. How To Practice
 
 Use the repository in loops:
 
@@ -294,6 +316,7 @@ PFPython/
   packaging/          # package layout and install concepts
   interview/          # interview-style practice problems
   projects/           # small runnable applications
+  special_topics/     # advanced topic-based practice
   tests/              # direct-run tests and later pytest practice
   modules/            # imports, packages, CLI, and data flow
   pfpython/           # reusable package modules
@@ -320,6 +343,8 @@ python3 projects/01_todo_cli.py --add "finish one lesson"
 python3 projects/04_habit_tracker_app/main.py --add "Review typing"
 python3 projects/05_study_assistant_app/main.py --topic unittest
 python3 projects/06_revision_trainer_app/main.py --topic retry
+python3 special_topics/project_architecture/01_layered_architecture.py
+python3 special_topics/project_architecture/03_bootstrap_and_entrypoint.py
 python3 tests/test_pfpython_models.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython

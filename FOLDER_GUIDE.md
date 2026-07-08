@@ -71,6 +71,9 @@ These folders are best when you want to build things and connect multiple ideas 
 - `projects/06_revision_trainer_app/`
   A queue and retry flavored application.
 
+- `special_topics/project_architecture/`
+  A final advanced topic for layered design, dependency flow, bootstrap, and refactoring toward real-world structure.
+
 ## 4. Planning And Tracking
 
 These folders are best when you want structure, review, and progress visibility.
@@ -102,6 +105,7 @@ If you want to:
 - use real built-in tools: go to `standard_library/`
 - build stronger habits: go to `engineering/`
 - practice full exercises: go to `projects/`
+- train for larger real-world structure: go to `special_topics/project_architecture/`
 - review what you already learned: use `practice_system/` and `tools/`
 
 ## Suggested Daily Use
