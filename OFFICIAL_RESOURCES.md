@@ -88,6 +88,17 @@ These official and primary docs support `special_topics/backend_architecture/`:
 - Uvicorn docs: [English](https://www.uvicorn.org/)
 - Pydantic docs: [English](https://pydantic.dev/docs/validation/latest/get-started/)
 
+## High-Level Backend Engineering
+
+These official and primary docs support `special_topics/backend_scale_patterns/`:
+
+- FastAPI advanced user guide: [English](https://fastapi.tiangolo.com/advanced/)
+- FastAPI security: [English](https://fastapi.tiangolo.com/tutorial/security/)
+- FastAPI background tasks: [English](https://fastapi.tiangolo.com/tutorial/background-tasks/)
+- OpenTelemetry Python docs: [English](https://opentelemetry.io/docs/languages/python/)
+- Uvicorn docs: [English](https://www.uvicorn.org/)
+- Redis develop docs: [English](https://redis.io/docs/latest/develop/)
+
 ## Advanced Topics
 
 These official pages fit `advanced/`:

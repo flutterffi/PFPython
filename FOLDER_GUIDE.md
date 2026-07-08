@@ -80,6 +80,9 @@ These folders are best when you want to build things and connect multiple ideas 
 - `special_topics/backend_architecture/`
   A backend-focused advanced topic for logging, FastAPI-style app structure, request flow, and service boundaries.
 
+- `special_topics/backend_scale_patterns/`
+  A high-level backend topic for auth, cache, idempotency, background jobs, observability, rate limiting, and degradation strategy.
+
 ## 4. Planning And Tracking
 
 These folders are best when you want structure, review, and progress visibility.
@@ -113,6 +116,7 @@ If you want to:
 - practice full exercises: go to `projects/`
 - train for larger real-world structure: go to `special_topics/project_architecture/`
 - train for API and backend architecture: go to `special_topics/backend_architecture/`
+- train for production-style backend tradeoffs: go to `special_topics/backend_scale_patterns/`
 - review what you already learned: use `practice_system/` and `tools/`
 
 ## Suggested Daily Use

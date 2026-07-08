@@ -77,6 +77,19 @@ Start here:
 
 - [Backend Architecture Topic](./special_topics/backend_architecture/README.md)
 
+### High-Level Systems Topic
+
+Best for:
+
+- backend engineers who want system-design-flavored practice
+- learning resilience, observability, and scaling patterns
+- understanding where retries, caches, auth, and job queues fit
+- moving from app structure into production-style tradeoffs
+
+Start here:
+
+- [Backend Scale Patterns](./special_topics/backend_scale_patterns/README.md)
+
 ## Weekly Pattern
 
 Use this weekly rhythm for any path:

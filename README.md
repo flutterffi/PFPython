@@ -19,6 +19,7 @@ If you want a guided route instead of picking files manually, start here:
 - [Official Tracks](./official_tracks/README.md)
 - [Project Architecture Topic](./special_topics/project_architecture/README.md)
 - [Backend Architecture Topic](./special_topics/backend_architecture/README.md)
+- [Backend Scale Patterns](./special_topics/backend_scale_patterns/README.md)
 - [STUDY_PATHS.md](./STUDY_PATHS.md)
 - [OFFICIAL_RESOURCES.md](./OFFICIAL_RESOURCES.md)
 - [30 Day Plan](./learning_paths/30_day_plan.md)
@@ -37,6 +38,7 @@ Before picking files, you can also choose by usage style:
 - official Python documentation order: [Official Tracks](./official_tracks/README.md)
 - final advanced topic: [Project Architecture Topic](./special_topics/project_architecture/README.md)
 - backend practice topic: [Backend Architecture Topic](./special_topics/backend_architecture/README.md)
+- high-level backend systems topic: [Backend Scale Patterns](./special_topics/backend_scale_patterns/README.md)
 
 ### 1. Foundations
 
@@ -309,6 +311,28 @@ Topics in this stage:
 - request validation flow
 - service and repository boundaries for backend systems
 
+The `special_topics/backend_scale_patterns/` folder is for high-level backend engineering training.
+
+Run it like this:
+
+```bash
+python3 special_topics/backend_scale_patterns/01_auth_scopes_and_permissions.py
+python3 special_topics/backend_scale_patterns/02_cache_aside_and_invalidation.py
+python3 special_topics/backend_scale_patterns/03_idempotency_and_retry_control.py
+python3 special_topics/backend_scale_patterns/04_background_jobs_and_dead_letters.py
+python3 special_topics/backend_scale_patterns/05_observability_and_sli.py
+python3 special_topics/backend_scale_patterns/06_rate_limit_and_graceful_degradation.py
+```
+
+Topics in this stage:
+
+- auth scopes and permission checks
+- cache-aside strategy and invalidation
+- idempotency keys and retry safety
+- background jobs and dead-letter handling
+- observability, traces, and service indicators
+- rate limiting and graceful degradation
+
 ### 13. How To Practice
 
 Use the repository in loops:
@@ -373,9 +397,12 @@ python3 special_topics/project_architecture/01_layered_architecture.py
 python3 special_topics/project_architecture/03_bootstrap_and_entrypoint.py
 python3 special_topics/backend_architecture/02_structured_logging.py
 python3 special_topics/backend_architecture/03_fastapi_app_structure.py
+python3 special_topics/backend_scale_patterns/03_idempotency_and_retry_control.py
+python3 special_topics/backend_scale_patterns/05_observability_and_sli.py
 python3 tests/test_pfpython_models.py
 python3 tests/test_backend_service_app.py
 python3 tests/test_backend_routes.py
+python3 tests/test_backend_scale_patterns.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
 python3 tools/suggest_today.py --plan 30
