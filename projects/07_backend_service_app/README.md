@@ -37,6 +37,8 @@ python3 projects/07_backend_service_app/models.py
 python3 projects/07_backend_service_app/repository.py
 python3 projects/07_backend_service_app/service.py
 python3 projects/07_backend_service_app/routes.py
+python3 tests/test_backend_service_app.py
+python3 tests/test_backend_routes.py
 ```
 
 ## What To Practice

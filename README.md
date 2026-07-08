@@ -372,6 +372,8 @@ python3 special_topics/project_architecture/03_bootstrap_and_entrypoint.py
 python3 special_topics/backend_architecture/02_structured_logging.py
 python3 special_topics/backend_architecture/03_fastapi_app_structure.py
 python3 tests/test_pfpython_models.py
+python3 tests/test_backend_service_app.py
+python3 tests/test_backend_routes.py
 python3 modules/03_cli_arguments.py --name Learner
 python3 -m pfpython
 python3 tools/suggest_today.py --plan 30
